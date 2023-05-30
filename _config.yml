@@ -3,13 +3,13 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Hexo #标题
+title: 听雨声 #标题
 subtitle: '' #网站副标题
-description: '' #网站描述
+description: 所以生命啊，他璀璨如歌 #网站描述
 keywords:
-author: John Doe #作者
-language: en #语言
-timezone: '' #网站时区
+author: jiashuai Li #作者
+language: zh-CN #语言
+timezone: Asia/Shanghai #网站时区
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
@@ -43,13 +43,15 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
+
 prismjs:
   enable: false
   preprocess: true
@@ -97,9 +99,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: butterfly
 
 # Deployment
 ## Docs: https://hexo.io/docs/one-command-deployment
 deploy:
   type: ''
+
+
+

@@ -111,7 +111,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: true
+  enable: ture
 <<<<<<< HEAD
   labels:
     input_placeholder: Search for Posts

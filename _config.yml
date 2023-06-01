@@ -17,7 +17,7 @@ timezone: Asia/Shanghai #网站时区
 url: http://example.com
 permalink: :year/:month/:day/:title/
 =======
-title: Fomalhaut🥝
+title: 听雨声
 subtitle: 
 description: 'Future is now 🍭🍭🍭'
 keywords: 'Java,MySQL,算法,代码,博客,Butterfly,Hexo,Fomalhaut🥝,Fomalhaut'

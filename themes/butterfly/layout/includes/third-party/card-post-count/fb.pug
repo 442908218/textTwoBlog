@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - const fbSDKVer = 'v16.0'
 - const fbSDK = theme.messenger.enable ? `https://connect.facebook.net/${theme.facebook_comments.lang}/sdk/xfbml.customerchat.js#xfbml=1&version=${fbSDKVer}` : `https://connect.facebook.net/${theme.facebook_comments.lang}/sdk.js#xfbml=1&version=${fbSDKVer}`
 
@@ -8,6 +9,15 @@ script.
       else {
         let ele = document.createElement('script')
         ele.setAttribute('src','!{fbSDK}')
+=======
+script.
+  (()=>{
+    function loadFBComment () {
+      if (typeof FB === 'object') FB.XFBML.parse()
+      else {
+        let ele = document.createElement('script')
+        ele.setAttribute('src','https://connect.facebook.net/!{theme.facebook_comments.lang}/sdk.js#xfbml=1&version=v9.0')
+>>>>>>> e5e3a0e (my blog first commit)
         ele.setAttribute('async', 'true')
         ele.setAttribute('defer', 'true')
         ele.setAttribute('crossorigin', 'anonymous')

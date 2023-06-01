@@ -5,6 +5,7 @@ mixin articleSort(posts)
       - let tempYear = date(article.date, 'YYYY')
       - let no_cover = article.cover === false || !theme.cover.archives_enable ? 'no-article-cover' : ''
       - let title = article.title || _p('no_title')
+<<<<<<< HEAD
       if tempYear !== year
         - year = tempYear
         .article-sort-item.year= year
@@ -15,6 +16,20 @@ mixin articleSort(posts)
               img(src=url_for(article.cover) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
             else
               div(style=`background: ${article.cover}`)
+=======
+      - let iconAnimal = '#'+ getAnimalIcon(tempYear)
+      if tempYear !== year
+        - year = tempYear
+        //- .article-sort-item.year= year
+        .article-sort-item.year
+          span= year
+          svg.icon(aria-hidden='true' style="height:50px;width:50px")
+            use(xlink:href=iconAnimal)
+      .article-sort-item(class=no_cover)
+        if article.cover && theme.cover.archives_enable
+          a.article-sort-item-img(href=url_for(article.path) title=title)
+            img(src=url_for(article.cover) alt=title onerror=`this.onerror=null;this.src='${url_for(theme.error_img.post_page)}'`)
+>>>>>>> e5e3a0e (my blog first commit)
         .article-sort-item-info
           .article-sort-item-time
             i.far.fa-calendar-alt

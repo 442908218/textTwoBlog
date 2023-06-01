@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+#myscoll
+>>>>>>> e5e3a0e (my blog first commit)
 - var pageTitle
 - is_archive() ? page.title = findArchivesTitle(page, theme.menu, date) : ''
 - if (is_tag()) pageTitle = _p('page.tag') + ': ' + page.tag
@@ -7,6 +11,14 @@
 
 - var isSubtitle = config.subtitle ? ' - ' + config.subtitle : ''
 - var tabTitle = is_home() || !pageTitle ? config.title + isSubtitle : pageTitle + ' | ' + config.title
+<<<<<<< HEAD
+=======
+
+- var pageKeywords
+- if (page.keywords) pageKeywords = Array.isArray(page.keywords) ? (page.keywords).join(',') :  ([]).join(',') || page.keywords
+- else if (page.tags && page.tags.length) pageKeywords = page.tags.data.map(function(tag) {return tag.name;}).join(',')
+- else pageKeywords = Array.isArray(config.keywords) ? (config.keywords).join(','):  ([]).join(',') || config.keywords
+>>>>>>> e5e3a0e (my blog first commit)
 - var pageAuthor = config.email ? config.author + ',' + config.email : config.author
 - var pageCopyright = config.copyright || config.author
 - var themeColorLight = theme.theme_color && theme.theme_color.enable && theme.theme_color.meta_theme_color_light || '#ffffff'
@@ -15,8 +27,15 @@
 
 meta(charset='UTF-8')
 meta(http-equiv="X-UA-Compatible" content="IE=edge")
+<<<<<<< HEAD
 meta(name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover")
 title= tabTitle
+=======
+meta(name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no")
+title= tabTitle
+if pageKeywords
+  meta(name="keywords" content=pageKeywords)
+>>>>>>> e5e3a0e (my blog first commit)
 meta(name="author" content=pageAuthor)
 meta(name="copyright" content=pageCopyright)
 meta(name ="format-detection" content="telephone=no")
@@ -26,7 +45,11 @@ meta(name="theme-color" content=themeColor)
 include ./head/Open_Graph.pug
 
 !=favicon_tag(theme.favicon || config.favicon)
+<<<<<<< HEAD
 link(rel="canonical" href=urlNoIndex(null,config.pretty_urls.trailing_index,config.pretty_urls.trailing_html))
+=======
+link(rel="canonical" href=urlNoIndex())
+>>>>>>> e5e3a0e (my blog first commit)
 
 //- 預解析
 !=partial('includes/head/preconnect', {}, {cache: true})
@@ -40,13 +63,21 @@ if (theme.pwa && theme.pwa.enable)
 
 //- main css
 link(rel='stylesheet', href=url_for(theme.asset.main_css))
+<<<<<<< HEAD
 link(rel='stylesheet', href=url_for(theme.asset.fontawesome) media="print" onload="this.media='all'")
+=======
+link(rel='stylesheet', href=url_for(theme.asset.fontawesomeV6) media="print" onload="this.media='all'")
+>>>>>>> e5e3a0e (my blog first commit)
 
 if (theme.snackbar && theme.snackbar.enable)
   link(rel='stylesheet', href=url_for(theme.asset.snackbar_css) media="print" onload="this.media='all'")
 
 if theme.fancybox
+<<<<<<< HEAD
   link(rel='stylesheet' href=url_for(theme.asset.fancybox_css) media="print" onload="this.media='all'")
+=======
+  link(rel='stylesheet' href=url_for(theme.asset.fancybox_css_v4) media="print" onload="this.media='all'")
+>>>>>>> e5e3a0e (my blog first commit)
 
 //- google_adsense
 !=partial('includes/head/google_adsense', {}, {cache: true})
@@ -67,3 +98,8 @@ include ./head/noscript.pug
 !=fragment_cache('injectHeadJs', function(){return inject_head_js()})
 
 !=fragment_cache('injectHead', function(){return injectHtml(theme.inject.head)})
+<<<<<<< HEAD
+=======
+
+include ./custom/sun_moon.pug
+>>>>>>> e5e3a0e (my blog first commit)

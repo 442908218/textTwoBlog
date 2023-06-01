@@ -31,7 +31,12 @@ $font-size = hexo-config('font.global-font-size') ? convert(hexo-config('font.gl
 $code-font-size = hexo-config('font.code-font-size') ? convert(hexo-config('font.code-font-size')) : var(--global-font-size)
 $font-color = #1F2D3D
 $text-line-height = 2
+<<<<<<< HEAD
 $web-bg = hexo-config('background') && unquote(hexo-config('background'))
+=======
+// $web-bg = hexo-config('background') && unquote(hexo-config('background'))
+$web-bg = hexo-config('background.default') && unquote(hexo-config('background.default'))
+>>>>>>> e5e3a0e (my blog first commit)
 $index_top_img_height = hexo-config('index_top_img_height') ? convert(hexo-config('index_top_img_height')) : 100vh
 $index_site_info_top = hexo-config('index_site_info_top') ? convert(hexo-config('index_site_info_top')) : 43%
 // Global color & SVG
@@ -71,7 +76,11 @@ $button-hover-color = $themeColorEnable && hexo-config('theme_color.button_hover
 $button-bg = $theme-color
 $pseudo-hover = $button-hover-color
 // scrollbar
+<<<<<<< HEAD
 $scrollbar-color = $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
+=======
+$scrollbar-color= $themeColorEnable && hexo-config('theme_color.scrollbar_color') ? convert(hexo-config('theme_color.scrollbar_color')) : $theme-color
+>>>>>>> e5e3a0e (my blog first commit)
 // table
 $table-thead-bg = #99a9bf
 // reward
@@ -82,7 +91,11 @@ $search-bg = #f6f8fa
 $search-input-color = $font-black
 $search-color = $theme-color
 $search-keyword-highlight = #F47466
+<<<<<<< HEAD
 $search-a-color = $font-black
+=======
+$search-result-title = $font-black
+>>>>>>> e5e3a0e (my blog first commit)
 // comments
 $comments-switch-first-text = $bright-blue
 $comments-switch-second-text = $light-orange
@@ -98,7 +111,12 @@ $gallery-color = #fff
 $tag-hide-bg = $theme-color
 $tag-hide-toggle-bg = #f0f0f0
 // preloader
+<<<<<<< HEAD
 $preloader-bg = #37474f
+=======
+// $preloader-bg = #37474f
+$preloader-bg = hexo-config('preloader.enable') && hexo-config('preloader.load_color') ? convert(hexo-config('preloader.load_color')) : #37474f
+>>>>>>> e5e3a0e (my blog first commit)
 $preloader-word-color = #fff
 // rightside
 $rightside-bottom = hexo-config('rightside-bottom') ? convert(hexo-config('rightside-bottom')) : 40px
@@ -180,6 +198,10 @@ $tab-active-border-color = $theme-color
 $tab-button-active-bg = $card-bg
 $tab-to-top-color = #99a9bf
 // Tag Plugins - timeline
+<<<<<<< HEAD
 $timeline-default-color = $theme-color
 // archor
 $archor-button-icon = hexo-config('anchor.button.icon') ? hexo-config('anchor.button.icon') : '\f0c1'
+=======
+$timeline-default-color = $theme-color
+>>>>>>> e5e3a0e (my blog first commit)

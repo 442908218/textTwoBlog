@@ -36,7 +36,11 @@ script.
           generateHtml(twikooArray)
         }).catch(function (err) {
           const $dom = document.querySelector('#card-newest-comments .aside-list')
+<<<<<<< HEAD
           $dom.textContent= "!{_p('aside.card_newest_comments.error')}"
+=======
+          $dom.innerHTML= "!{_p('aside.card_newest_comments.error')}"
+>>>>>>> e5e3a0e (my blog first commit)
         })
       }
 

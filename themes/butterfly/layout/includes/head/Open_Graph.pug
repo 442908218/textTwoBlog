@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 if theme.Open_Graph_meta.enable
   -
     const coverVal = page.cover_type === 'img' ? page.cover : theme.avatar.img
@@ -9,6 +10,16 @@ if theme.Open_Graph_meta.enable
     }, theme.Open_Graph_meta.option)
   -
   != open_graph(ogOption)
+=======
+if theme.Open_Graph_meta
+  - let contentType = is_post() ? 'article' : 'website'
+  - let metaImage = (page.cover || theme.avatar.img) ? full_url_for(page.cover || theme.avatar.img) : ''
+  - let fb_appId = theme.facebook_comments.app_id || ''
+  - let fb_admins = theme.facebook_comments.user_id || ''
+
+  != open_graph({type: contentType, image: metaImage, fb_admins: fb_admins, fb_app_id: fb_appId})
+
+>>>>>>> e5e3a0e (my blog first commit)
 else
   meta(name="description" content=page_description())
 

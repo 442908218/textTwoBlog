@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 algolia_search:
   name: algoliasearch
   file: dist/algoliasearch-lite.umd.js
@@ -6,6 +7,16 @@ instantsearch:
   name: instantsearch.js
   file: dist/instantsearch.production.min.js
   version: 4.55.0
+=======
+algolia_search_v4:
+  name: algoliasearch
+  file: dist/algoliasearch-lite.umd.js
+  version: 4.13.1
+instantsearch_v4:
+  name: instantsearch.js
+  file: dist/instantsearch.production.min.js
+  version: 4.42.0
+>>>>>>> e5e3a0e (my blog first commit)
 pjax:
   name: pjax
   file: pjax.min.js
@@ -13,11 +24,19 @@ pjax:
 gitalk:
   name: gitalk
   file: dist/gitalk.min.js
+<<<<<<< HEAD
   version: 1.8.0
 gitalk_css:
   name: gitalk
   file: dist/gitalk.css
   version: 1.8.0
+=======
+  version: 1.7.2
+gitalk_css:
+  name: gitalk
+  file: dist/gitalk.css
+  version: 1.7.2
+>>>>>>> e5e3a0e (my blog first commit)
 blueimp_md5:
   name: blueimp-md5
   file: js/md5.min.js
@@ -25,6 +44,7 @@ blueimp_md5:
 valine:
   name: valine
   file: dist/Valine.min.js
+<<<<<<< HEAD
   version: 1.5.1
 disqusjs:
   name: disqusjs
@@ -38,16 +58,39 @@ twikoo:
   name: twikoo
   file: dist/twikoo.all.min.js
   version: 1.6.16
+=======
+  version: 1.4.18
+disqusjs:
+  name: disqusjs
+  file: dist/browser/disqusjs.es2015.umd.min.js
+  version: 3.0.1
+disqusjs_css:
+  name: disqusjs
+  file: dist/browser/styles/disqusjs.css
+  version: 3.0.1
+twikoo:
+  name: twikoo
+  file: dist/twikoo.all.min.js
+  version: 1.5.11
+>>>>>>> e5e3a0e (my blog first commit)
 waline_js:
   name: '@waline/client'
   file: dist/waline.js
   other_name: waline
+<<<<<<< HEAD
   version: 2.15.4
+=======
+  version: 2.6.1
+>>>>>>> e5e3a0e (my blog first commit)
 waline_css:
   name: '@waline/client'
   file: dist/waline.css
   other_name: waline
+<<<<<<< HEAD
   version: 2.15.4
+=======
+  version: 2.6.1
+>>>>>>> e5e3a0e (my blog first commit)
 sharejs:
   name: butterfly-extsrc
   file: sharejs/dist/js/social-share.min.js
@@ -64,16 +107,28 @@ katex:
   name: katex
   file: dist/katex.min.css
   other_name: KaTeX
+<<<<<<< HEAD
   version: 0.16.7
+=======
+  version: 0.16.0
+>>>>>>> e5e3a0e (my blog first commit)
 katex_copytex:
   name: katex
   file: dist/contrib/copy-tex.min.js
   other_name: KaTeX
+<<<<<<< HEAD
   version: 0.16.7
 mermaid:
   name: mermaid
   file: dist/mermaid.min.js
   version: 9.4.3
+=======
+  version: 0.16.0
+mermaid:
+  name: mermaid
+  file: dist/mermaid.min.js
+  version: 9.1.2
+>>>>>>> e5e3a0e (my blog first commit)
 canvas_ribbon:
   name: butterfly-extsrc
   file: dist/canvas-ribbon.min.js
@@ -105,6 +160,7 @@ ClickShowText:
 lazyload:
   name: vanilla-lazyload
   file: dist/lazyload.iife.min.js
+<<<<<<< HEAD
   version: 17.8.3
 instantpage:
   name: instant.page
@@ -114,10 +170,22 @@ typed:
   name: typed.js
   file: dist/typed.umd.js
   version: 2.0.16
+=======
+  version: 17.3.1
+instantpage:
+  name: instant.page
+  file: instantpage.js
+  version: 5.1.0
+typed:
+  name: typed.js
+  file: lib/typed.min.js
+  version: 2.0.12
+>>>>>>> e5e3a0e (my blog first commit)
 pangu:
   name: pangu
   file: dist/browser/pangu.min.js
   version: 4.0.7
+<<<<<<< HEAD
 fancybox_css:
   name: '@fancyapps/ui'
   file: dist/fancybox/fancybox.css
@@ -127,11 +195,26 @@ fancybox:
   name: '@fancyapps/ui'
   file: dist/fancybox/fancybox.umd.js
   version: 5.0.17
+=======
+fancybox_css_v4:
+  name: '@fancyapps/ui'
+  file: dist/fancybox.css
+  version: 4.0.27
+  other_name: fancyapps-ui
+fancybox_v4:
+  name: '@fancyapps/ui'
+  file: dist/fancybox.umd.js
+  version: 4.0.27
+>>>>>>> e5e3a0e (my blog first commit)
   other_name: fancyapps-ui
 medium_zoom:
   name: medium-zoom
   file: dist/medium-zoom.min.js
+<<<<<<< HEAD
   version: 1.0.8
+=======
+  version: 1.0.6
+>>>>>>> e5e3a0e (my blog first commit)
 snackbar_css:
   name: node-snackbar
   file: dist/snackbar.min.css
@@ -140,11 +223,19 @@ snackbar:
   name: node-snackbar
   file: dist/snackbar.min.js
   version: 0.1.16
+<<<<<<< HEAD
 fontawesome:
   name: '@fortawesome/fontawesome-free'
   file: css/all.min.css
   other_name: font-awesome
   version: 6.4.0
+=======
+fontawesomeV6:
+  name: '@fortawesome/fontawesome-free'
+  file: css/all.min.css
+  other_name: font-awesome
+  version: 6.1.1
+>>>>>>> e5e3a0e (my blog first commit)
 flickr_justified_gallery_js:
   name: flickr-justified-gallery
   file: dist/fjGallery.min.js
@@ -169,16 +260,25 @@ prismjs_js:
   name: prismjs
   file: prism.js
   other_name: prism
+<<<<<<< HEAD
   version: 1.29.0
+=======
+  version: 1.28.0
+>>>>>>> e5e3a0e (my blog first commit)
 prismjs_lineNumber_js:
   name: prismjs
   file: plugins/line-numbers/prism-line-numbers.min.js
   other_name: prism
+<<<<<<< HEAD
   version: 1.29.0
+=======
+  version: 1.28.0
+>>>>>>> e5e3a0e (my blog first commit)
 prismjs_autoloader:
   name: prismjs
   file: plugins/autoloader/prism-autoloader.min.js
   other_name: prism
+<<<<<<< HEAD
   version: 1.29.0
 artalk_js:
   name: artalk
@@ -212,3 +312,6 @@ abcjs_basic_js:
   name: abcjs
   file: dist/abcjs-basic-min.js
   version: 6.2.2
+=======
+  version: 1.28.0
+>>>>>>> e5e3a0e (my blog first commit)

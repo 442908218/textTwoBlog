@@ -2,6 +2,7 @@
 
 script.
   function loadDisqus () {
+<<<<<<< HEAD
     const disqus_config = function () {
       this.page.url = '!{ page.permalink }'
       this.page.identifier = '!{ url_for(page.path) }'
@@ -9,14 +10,26 @@ script.
     }
 
     const disqusReset = () => {
+=======
+    var disqus_config = function () {
+      this.page.url = '!{ page.permalink }'
+      this.page.identifier = '!{ url_for(page.path) }'
+      this.page.title = '!{ disqusPageTitle }'
+    };
+
+    window.disqusReset = () => {
+>>>>>>> e5e3a0e (my blog first commit)
       DISQUS.reset({
         reload: true,
         config: disqus_config
       })
     }
 
+<<<<<<< HEAD
     btf.addModeChange('disqus', disqusReset)
 
+=======
+>>>>>>> e5e3a0e (my blog first commit)
     if (window.DISQUS) disqusReset()
     else {
       (function() { 
@@ -26,6 +39,13 @@ script.
         (d.head || d.body).appendChild(s);
       })();
     }
+<<<<<<< HEAD
+=======
+
+    document.getElementById('darkmode').addEventListener('click', () => {
+      setTimeout(() => window.disqusReset(), 200)
+    })
+>>>>>>> e5e3a0e (my blog first commit)
   }
 
   if ('!{theme.comments.use[0]}' === 'Disqus' || !!{theme.comments.lazyload}) {

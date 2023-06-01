@@ -21,10 +21,13 @@ script.
         window.loadMermaid ? runMermaid() : getScript('!{url_for(theme.asset.mermaid)}').then(runMermaid)
       }
 
+<<<<<<< HEAD
       btf.addModeChange('mermaid', () => {
         window.runMermaid()
       })
 
+=======
+>>>>>>> e5e3a0e (my blog first commit)
       window.pjax ? loadMermaid() : document.addEventListener('DOMContentLoaded', loadMermaid)
     }
   })()

@@ -18,7 +18,11 @@
     .search-wrap
       display: none
 
+<<<<<<< HEAD
     .local-search-hit-item
+=======
+    .local-search__hit-item
+>>>>>>> e5e3a0e (my blog first commit)
       position: relative
       padding-left: 24px
       line-height: 1.7
@@ -43,11 +47,17 @@
 
       a
         display: block
+<<<<<<< HEAD
         color: var(--search-a-color)
+=======
+        color: var(--search-result-title)
+        font-weight: 600
+>>>>>>> e5e3a0e (my blog first commit)
 
         &:hover
           color: $search-color
 
+<<<<<<< HEAD
       .search-result-title
         font-weight: 600
 
@@ -72,3 +82,20 @@
   background: transparent
   color: $search-keyword-highlight
   font-weight: bold
+=======
+      .search-result
+        margin: 0 8px 8px 0
+        word-break: break-all
+
+      .search-keyword
+        color: $search-keyword-highlight
+        font-weight: bold
+
+    .search-result-list
+      overflow-y: auto
+      max-height: calc(80vh - 130px)
+
+      +maxWidth768()
+        padding-bottom: 40px
+        max-height: 75vh !important
+>>>>>>> e5e3a0e (my blog first commit)

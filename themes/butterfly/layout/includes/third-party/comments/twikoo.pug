@@ -23,7 +23,11 @@ script.
         urls: [window.location.pathname],
         includeReply: false
       }).then(function (res) {
+<<<<<<< HEAD
         countELement.textContent = res[0].count
+=======
+        countELement.innerText = res[0].count
+>>>>>>> e5e3a0e (my blog first commit)
       }).catch(function (err) {
         console.error(err);
       });

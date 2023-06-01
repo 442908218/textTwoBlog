@@ -10,7 +10,11 @@ script.
         const waline = Waline.init(initData)
       }
 
+<<<<<<< HEAD
       if (typeof Waline === 'object') initWaline() 
+=======
+      if (typeof Waline === 'function') initWaline() 
+>>>>>>> e5e3a0e (my blog first commit)
       else getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
     }
 

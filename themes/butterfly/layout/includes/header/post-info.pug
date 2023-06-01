@@ -10,11 +10,23 @@
       if (theme.post_meta.post.date_type)
         span.post-meta-date
           if (theme.post_meta.post.date_type === 'both')
+<<<<<<< HEAD
             i.far.fa-calendar-alt.fa-fw.post-meta-icon
             span.post-meta-label= _p('post.created')
             time.post-meta-date-created(datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
             span.post-meta-separator |
             i.fas.fa-history.fa-fw.post-meta-icon
+=======
+            //- i.far.fa-calendar-alt.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:30px;height:30px;position:relative;top:10px").post-meta-icon
+              use(xlink:href='#icon-rili')
+            span.post-meta-label= _p('post.created') + " "
+            time.post-meta-date-created(datetime=date_xml(page.date) title=_p('post.created') + ' ' + full_date(page.date))=date(page.date, config.date_format)
+            span.post-meta-separator |
+            //- i.fas.fa-history.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:18px;height:18px;position:relative;top:5px").post-meta-icon
+              use(xlink:href='#icon-gengxin1')
+>>>>>>> e5e3a0e (my blog first commit)
             span.post-meta-label= _p('post.updated')
             time.post-meta-date-updated(datetime=date_xml(page.updated) title=_p('post.updated') + ' ' + full_date(page.updated))=date(page.updated, config.date_format)
           else
@@ -31,7 +43,13 @@
             span.post-meta-separator |
 
           each item, index in page.categories.data
+<<<<<<< HEAD
             i.fas.fa-inbox.fa-fw.post-meta-icon
+=======
+            //- i.fas.fa-inbox.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:18px;height:18px;position:relative;top:5px").post-meta-icon
+              use(xlink:href='#icon-biaoqian')
+>>>>>>> e5e3a0e (my blog first commit)
             a(href=url_for(item.path)).post-meta-categories #[=item.name]
             if (index < page.categories.data.length - 1)
               i.fas.fa-angle-right.post-meta-separator
@@ -42,13 +60,25 @@
         span.post-meta-separator |
         span.post-meta-wordcount
           if theme.wordcount.post_wordcount
+<<<<<<< HEAD
             i.far.fa-file-word.fa-fw.post-meta-icon
+=======
+            //- i.far.fa-file-word.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:25px;height:25px;position:relative;top:8px").post-meta-icon
+              use(xlink:href='#icon-charuword')
+>>>>>>> e5e3a0e (my blog first commit)
             span.post-meta-label= _p('post.wordcount') + ':'
             span.word-count= wordcount(page.content)
             if theme.wordcount.min2read
               span.post-meta-separator |
           if theme.wordcount.min2read
+<<<<<<< HEAD
             i.far.fa-clock.fa-fw.post-meta-icon
+=======
+            //- i.far.fa-clock.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:20px;height:20px;position:relative;top:5px").post-meta-icon
+              use(xlink:href='#icon-shizhong')
+>>>>>>> e5e3a0e (my blog first commit)
             span.post-meta-label= _p('post.min2read') + ':'
             span= min2read(page.content, {cn: 350, en: 160}) + _p('post.min2read_unit')
     
@@ -56,7 +86,13 @@
       mixin pvBlock(parent_id,parent_class,parent_title)
         span.post-meta-separator |
         span(class=parent_class id=parent_id data-flag-title=page.title)
+<<<<<<< HEAD
           i.far.fa-eye.fa-fw.post-meta-icon
+=======
+          //- i.far.fa-eye.fa-fw.post-meta-icon
+          svg.meta_icon(style="width:25px;height:25px;position:relative;top:5px").post-meta-icon
+            use(xlink:href='#icon-eye')
+>>>>>>> e5e3a0e (my blog first commit)
           span.post-meta-label=_p('post.page_pv') + ':'
           if block
             block
@@ -75,10 +111,13 @@
           +pvBlock('','','')
             span#twikoo_visitors
               i.fa-solid.fa-spinner.fa-spin
+<<<<<<< HEAD
         else if commentUse[0] === 'Artalk' && theme.artalk.visitor
           +pvBlock('','','')
             span#ArtalkPV
               i.fa-solid.fa-spinner.fa-spin
+=======
+>>>>>>> e5e3a0e (my blog first commit)
         else if theme.busuanzi.page_pv
           +pvBlock('','post-meta-pv-cv','')
             span#busuanzi_value_page_pv
@@ -94,7 +133,13 @@
         mixin countBlock
           span.post-meta-separator |
           span.post-meta-commentcount
+<<<<<<< HEAD
             i.far.fa-comments.fa-fw.post-meta-icon
+=======
+            //- i.far.fa-comments.fa-fw.post-meta-icon
+            svg.meta_icon(style="width:22px;height:22px;position:relative;top:6px").post-meta-icon
+              use(xlink:href='#icon-pinglun1')
+>>>>>>> e5e3a0e (my blog first commit)
             span.post-meta-label= _p('post.comments') + ':'
             if block
               block
@@ -134,13 +179,20 @@
             +countBlock
               a(href=url_for(page.path) + '#post-comment')
                 span.fb-comments-count(data-href=urlNoIndex())
+<<<<<<< HEAD
+=======
+                  i.fa-solid.fa-spinner.fa-spin
+>>>>>>> e5e3a0e (my blog first commit)
           when 'Remark42'
             +countBlock
               a(href=url_for(page.path) + '#post-comment')
                 span.remark42__counter(data-url=urlNoIndex())
+<<<<<<< HEAD
                   i.fa-solid.fa-spinner.fa-spin
           when 'Artalk'
             +countBlock
               a(href=url_for(page.path) + '#post-comment')
                 span.artalk-count
+=======
+>>>>>>> e5e3a0e (my blog first commit)
                   i.fa-solid.fa-spinner.fa-spin

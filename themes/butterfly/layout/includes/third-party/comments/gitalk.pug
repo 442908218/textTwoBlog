@@ -1,4 +1,14 @@
 script.
+<<<<<<< HEAD
+=======
+  function addGitalkSource () {
+    const ele = document.createElement('link')
+    ele.rel = 'stylesheet'
+    ele.href= '!{url_for(theme.asset.gitalk_css)}'
+    document.getElementsByTagName('head')[0].appendChild(ele)
+  }
+
+>>>>>>> e5e3a0e (my blog first commit)
   function loadGitalk () {
     function initGitalk () {
       var gitalk = new Gitalk(Object.assign({
@@ -16,7 +26,11 @@ script.
 
     if (typeof Gitalk === 'function') initGitalk()
     else {
+<<<<<<< HEAD
       getCSS('!{url_for(theme.asset.gitalk_css)}')
+=======
+      addGitalkSource()
+>>>>>>> e5e3a0e (my blog first commit)
       getScript('!{url_for(theme.asset.gitalk)}').then(initGitalk)
     }
   }
@@ -24,7 +38,11 @@ script.
   function commentCount(n){
     let isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
     if (isCommentCount) {
+<<<<<<< HEAD
       isCommentCount.textContent= n
+=======
+      isCommentCount.innerHTML= n
+>>>>>>> e5e3a0e (my blog first commit)
     }
   }
 

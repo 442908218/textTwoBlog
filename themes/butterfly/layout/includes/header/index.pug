@@ -1,4 +1,5 @@
 if !theme.disable_top_img && page.top_img !== false
+<<<<<<< HEAD
   if is_post()
     - var top_img = page.top_img || page.cover || theme.default_top_img
   else if is_page()
@@ -18,6 +19,27 @@ if !theme.disable_top_img && page.top_img !== false
 
   if top_img !== false
     - var imgSource = top_img && isImgOrUrl(top_img) ? `background-image: url('${url_for(top_img)}')` : `background: ${top_img}`
+=======
+  //- if is_post()
+  //-   - var top_img = page.top_img || page.cover || page.randomcover
+  //- else if is_page()
+  //-   - var top_img = page.top_img || theme.default_top_img
+  //- else if is_tag()
+  //-   - var top_img = theme.tag_per_img && theme.tag_per_img[page.tag] 
+  //-   - top_img = top_img ? top_img : (theme.tag_img !== false ? theme.tag_img || theme.default_top_img : false)
+  //- else if is_category()
+  //-   - var top_img = theme.category_per_img && theme.category_per_img[page.category]
+  //-   - top_img = top_img ? top_img : (theme.category_img !== false ? theme.category_img || theme.default_top_img : false)
+  //- else if is_home()
+  //-   - var top_img = theme.index_img !== false ? theme.index_img || theme.default_top_img : false
+  //- else if is_archive()
+  //-   - var top_img = theme.archive_img !== false ? theme.archive_img || theme.default_top_img : false
+  //- else
+  //-   - var top_img = page.top_img || theme.default_top_img
+
+  if top_img !== false
+    - var imgSource = top_img && top_img.indexOf('/') !== -1 ? `background-image: url('${url_for(top_img)}')` : `background: ${top_img}`
+>>>>>>> e5e3a0e (my blog first commit)
     - var bg_img = top_img ? imgSource : ''
     - var site_title = page.title || page.tag || page.category || config.title
     - var isHomeClass = is_home() ? 'full_page' : 'not-home-page'
@@ -28,13 +50,32 @@ else
   - var top_img = false
   - var isHomeClass = 'not-top-img'
 
+<<<<<<< HEAD
 - const isFixedClass = theme.nav.fixed ? ' fixed' : ''
 
 header#page-header(class=`${isHomeClass+isFixedClass}` style=bg_img)
+=======
+header#page-header(class=isHomeClass style=bg_img)
+>>>>>>> e5e3a0e (my blog first commit)
   !=partial('includes/header/nav', {}, {cache: true})
   if top_img !== false
     if is_post()
       include ./post-info.pug
+<<<<<<< HEAD
+=======
+      
+      //- 安知鱼波浪
+      section.main-hero-waves-area.waves-area
+        svg.waves-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', viewBox='0 24 150 28', preserveAspectRatio='none', shape-rendering='auto')
+          defs
+            path#gentle-wave(d='M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z')
+          g.parallax
+            use(href='#gentle-wave', x='48', y='0')
+            use(href='#gentle-wave', x='48', y='3')
+            use(href='#gentle-wave', x='48', y='5')
+            use(href='#gentle-wave', x='48', y='7')
+
+>>>>>>> e5e3a0e (my blog first commit)
     else if is_home() 
       #site-info
         h1#site-title=site_title
@@ -49,4 +90,19 @@ header#page-header(class=`${isHomeClass+isFixedClass}` style=bg_img)
         i.fas.fa-angle-down.scroll-down-effects
     else
       #page-site-info
+<<<<<<< HEAD
         h1#site-title=site_title
+=======
+        h1#site-title=site_title
+
+      //- 安知鱼波浪
+      section.main-hero-waves-area.waves-area
+        svg.waves-svg(xmlns='http://www.w3.org/2000/svg', xlink='http://www.w3.org/1999/xlink', viewBox='0 24 150 28', preserveAspectRatio='none', shape-rendering='auto')
+          defs
+            path#gentle-wave(d='M -160 44 c 30 0 58 -18 88 -18 s 58 18 88 18 s 58 -18 88 -18 s 58 18 88 18 v 44 h -352 Z')
+          g.parallax
+            use(href='#gentle-wave', x='48', y='0')
+            use(href='#gentle-wave', x='48', y='3')
+            use(href='#gentle-wave', x='48', y='5')
+            use(href='#gentle-wave', x='48', y='7')
+>>>>>>> e5e3a0e (my blog first commit)

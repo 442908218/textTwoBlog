@@ -12,10 +12,17 @@ script.
     document.getElementById('utterances-wrap').insertAdjacentElement('afterbegin',ele)
   }
 
+<<<<<<< HEAD
   function utterancesTheme (theme) {
     const iframe = document.querySelector('.utterances-frame')
     if (iframe) {
       const theme = theme === 'dark' ? '#{theme.utterances.dark_theme}' : '#{theme.utterances.light_theme}'
+=======
+  function utterancesTheme () {
+    const iframe = document.querySelector('.utterances-frame')
+    if (iframe) {
+      const theme = document.documentElement.getAttribute('data-theme') === 'dark' ? '#{theme.utterances.dark_theme}' : '#{theme.utterances.light_theme}'
+>>>>>>> e5e3a0e (my blog first commit)
       const message = {
         type: 'set-theme',
         theme: theme
@@ -24,8 +31,11 @@ script.
     }
   }
 
+<<<<<<< HEAD
   btf.addModeChange('utterances', utterancesTheme)
 
+=======
+>>>>>>> e5e3a0e (my blog first commit)
   if ('!{theme.comments.use[0]}' === 'Utterances' || !!{theme.comments.lazyload}) {
     if (!{theme.comments.lazyload}) btf.loadComment(document.getElementById('utterances-wrap'), loadUtterances)
     else loadUtterances()

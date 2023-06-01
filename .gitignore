@@ -5,4 +5,11 @@ db.json
 node_modules/
 public/
 .deploy*/
+<<<<<<< HEAD
 _multiconfig.yml
+=======
+.deploy_git*/
+.idea
+themes/butterfly/.git
+package-lock.json
+>>>>>>> e5e3a0e (my blog first commit)

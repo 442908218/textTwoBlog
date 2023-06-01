@@ -1,9 +1,13 @@
 /**
  * Butterfly
+<<<<<<< HEAD
  * galleryGroup and gallery
  * {% galleryGroup [name] [descr] [url] [img] %}
  * {% gallery [lazyload],[rowHeight],[limit] %}
  * {% gallery url,[url],[lazyload],[rowHeight],[limit] %}
+=======
+ * galleryGroup and allery
+>>>>>>> e5e3a0e (my blog first commit)
  */
 
 'use strict'
@@ -11,6 +15,7 @@
 const urlFor = require('hexo-util').url_for.bind(hexo)
 
 function gallery (args, content) {
+<<<<<<< HEAD
   const { data, languages } = hexo.theme.i18n
   args = args.join(' ').split(',')
   let rowHeight, limit, lazyload, type, dataStr
@@ -45,11 +50,19 @@ function gallery (args, content) {
     </div>
     <button class="gallery-load-more"><span>${data[languages[0]].load_more}</span><i class="fa-solid fa-arrow-down"></i></button>
     </div>`
+=======
+  return `<div class="fj-gallery">${hexo.render.renderSync({ text: content, engine: 'markdown' }).split('\n').join('')}
+          </div>`
+>>>>>>> e5e3a0e (my blog first commit)
 }
 
 function galleryGroup (args) {
   const name = args[0]
+<<<<<<< HEAD
   const descr = args[1]
+=======
+  const desrc = args[1]
+>>>>>>> e5e3a0e (my blog first commit)
   const url = urlFor(args[2])
   const img = urlFor(args[3])
 
@@ -58,7 +71,11 @@ function galleryGroup (args) {
   <img class="gallery-group-img no-lightbox" src='${img}' alt="Group Image Gallery">
   <figcaption>
   <div class="gallery-group-name">${name}</div>
+<<<<<<< HEAD
   <p>${descr}</p>
+=======
+  <p>${desrc}</p>
+>>>>>>> e5e3a0e (my blog first commit)
   <a href='${url}'></a>
   </figcaption>
   </figure>

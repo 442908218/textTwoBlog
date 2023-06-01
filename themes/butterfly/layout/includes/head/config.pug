@@ -21,12 +21,18 @@
     localSearch = JSON.stringify({
       path: theme.local_search.CDN ? theme.local_search.CDN : config.root + config.search.path,
       preload: theme.local_search.preload,
+<<<<<<< HEAD
       top_n_per_article: theme.local_search.top_n_per_article,
       unescape: theme.local_search.unescape,
       languages: {
         // search languages
         hits_empty: _p("search.local_search.hits_empty"),
         hits_stats: _p("search.local_search.hits_stats"),
+=======
+      languages: {
+        // search languages
+        hits_empty: _p("search.local_search.hits_empty"),
+>>>>>>> e5e3a0e (my blog first commit)
       }
     })
   }
@@ -88,7 +94,11 @@
   }
 
 script.
+<<<<<<< HEAD
   const GLOBAL_CONFIG = {
+=======
+  const GLOBAL_CONFIG = { 
+>>>>>>> e5e3a0e (my blog first commit)
     root: '!{config.root}',
     algolia: !{algolia},
     localSearch: !{localSearch},
@@ -105,7 +115,11 @@ script.
       post: !{theme.post_meta.post.date_format === 'relative'}
     },
     runtime: '!{theme.runtimeshow.enable ? _p("aside.card_webinfo.runtime.unit") : ""}',
+<<<<<<< HEAD
     dateSuffix: {
+=======
+    date_suffix: {
+>>>>>>> e5e3a0e (my blog first commit)
       just: '!{_p("date_suffix.just")}',
       min: '!{_p("date_suffix.min")}',
       hour: '!{_p("date_suffix.hour")}',
@@ -123,10 +137,14 @@ script.
     },
     isPhotoFigcaption: !{theme.photofigcaption},
     islazyload: !{theme.lazyload.enable},
+<<<<<<< HEAD
     isAnchor: !{theme.anchor.auto_update || false},
     percent: {
       toc: !{theme.toc.scroll_percent},
       rightside: !{theme.rightside_scroll_percent},
     },
     autoDarkmode: !{theme.darkmode.enable && theme.darkmode.autoChangeMode === 1}
+=======
+    isAnchor: !{theme.anchor}
+>>>>>>> e5e3a0e (my blog first commit)
   }

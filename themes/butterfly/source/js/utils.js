@@ -62,10 +62,17 @@ const btf = {
     const { position, bgLight, bgDark } = GLOBAL_CONFIG.Snackbar
     const bg = document.documentElement.getAttribute('data-theme') === 'light' ? bgLight : bgDark
     Snackbar.show({
+<<<<<<< HEAD
       text,
       backgroundColor: bg,
       showAction,
       duration,
+=======
+      text: text,
+      backgroundColor: bg,
+      showAction: showAction,
+      duration: duration,
+>>>>>>> e5e3a0e (my blog first commit)
       pos: position,
       customClass: 'snackbar-css'
     })
@@ -79,6 +86,7 @@ const btf = {
     const hour = minute * 60
     const day = hour * 24
     const month = day * 30
+<<<<<<< HEAD
     const { dateSuffix } = GLOBAL_CONFIG
 
     if (!more) return parseInt(dateDiff / day)
@@ -94,6 +102,33 @@ const btf = {
     if (hourCount >= 1) return `${parseInt(hourCount)} ${dateSuffix.hour}`
     if (minuteCount >= 1) return `${parseInt(minuteCount)} ${dateSuffix.min}`
     return dateSuffix.just
+=======
+
+    let result
+    if (more) {
+      const monthCount = dateDiff / month
+      const dayCount = dateDiff / day
+      const hourCount = dateDiff / hour
+      const minuteCount = dateDiff / minute
+
+      if (monthCount > 12) {
+        result = datePost.toLocaleDateString().replace(/\//g, '-')
+      } else if (monthCount >= 1) {
+        result = parseInt(monthCount) + ' ' + GLOBAL_CONFIG.date_suffix.month
+      } else if (dayCount >= 1) {
+        result = parseInt(dayCount) + ' ' + GLOBAL_CONFIG.date_suffix.day
+      } else if (hourCount >= 1) {
+        result = parseInt(hourCount) + ' ' + GLOBAL_CONFIG.date_suffix.hour
+      } else if (minuteCount >= 1) {
+        result = parseInt(minuteCount) + ' ' + GLOBAL_CONFIG.date_suffix.min
+      } else {
+        result = GLOBAL_CONFIG.date_suffix.just
+      }
+    } else {
+      result = parseInt(dateDiff / day)
+    }
+    return result
+>>>>>>> e5e3a0e (my blog first commit)
   },
 
   loadComment: (dom, callback) => {
@@ -112,8 +147,12 @@ const btf = {
 
   scrollToDest: (pos, time = 500) => {
     const currentPos = window.pageYOffset
+<<<<<<< HEAD
     const isNavFixed = document.getElementById('page-header').classList.contains('fixed')
     if (currentPos > pos || isNavFixed) pos = pos - 70
+=======
+    if (currentPos > pos) pos = pos - 70
+>>>>>>> e5e3a0e (my blog first commit)
 
     if ('scrollBehavior' in document.documentElement.style) {
       window.scrollTo({
@@ -177,12 +216,21 @@ const btf = {
    * @param {*} options object key: value
    */
   wrap: (selector, eleType, options) => {
+<<<<<<< HEAD
     const createEle = document.createElement(eleType)
     for (const [key, value] of Object.entries(options)) {
       createEle.setAttribute(key, value)
     }
     selector.parentNode.insertBefore(createEle, selector)
     createEle.appendChild(selector)
+=======
+    const creatEle = document.createElement(eleType)
+    for (const [key, value] of Object.entries(options)) {
+      creatEle.setAttribute(key, value)
+    }
+    selector.parentNode.insertBefore(creatEle, selector)
+    creatEle.appendChild(selector)
+>>>>>>> e5e3a0e (my blog first commit)
   },
 
   unwrap: el => {
@@ -233,6 +281,7 @@ const btf = {
         Fancybox.bind('[data-fancybox]', {
           Hash: false,
           Thumbs: {
+<<<<<<< HEAD
             showOnStart: false
           },
           Images: {
@@ -257,6 +306,9 @@ const btf = {
               ],
               right: ['slideshow', 'thumbs', 'close']
             }
+=======
+            autoStart: false
+>>>>>>> e5e3a0e (my blog first commit)
           }
         })
         window.fancyboxRun = true
@@ -265,21 +317,33 @@ const btf = {
   },
 
   initJustifiedGallery: function (selector) {
+<<<<<<< HEAD
     const runJustifiedGallery = i => {
       if (!btf.isHidden(i)) {
         fjGallery(i, {
           itemSelector: '.fj-gallery-item',
           rowHeight: i.getAttribute('data-rowHeight'),
+=======
+    selector.forEach(function (i) {
+      if (!btf.isHidden(i)) {
+        fjGallery(i, {
+          itemSelector: '.fj-gallery-item',
+          rowHeight: 220,
+>>>>>>> e5e3a0e (my blog first commit)
           gutter: 4,
           onJustify: function () {
             this.$container.style.opacity = '1'
           }
         })
       }
+<<<<<<< HEAD
     }
 
     if (Array.from(selector).length === 0) runJustifiedGallery(selector)
     else selector.forEach(i => { runJustifiedGallery(i) })
+=======
+    })
+>>>>>>> e5e3a0e (my blog first commit)
   },
 
   updateAnchor: (anchor) => {
@@ -288,6 +352,7 @@ const btf = {
       const title = GLOBAL_CONFIG_SITE.title
       window.history.replaceState({
         url: location.href,
+<<<<<<< HEAD
         title
       }, title, anchor)
     }
@@ -310,5 +375,10 @@ const btf = {
       ...window.themeChange,
       [name]: fn
     }
+=======
+        title: title
+      }, title, anchor)
+    }
+>>>>>>> e5e3a0e (my blog first commit)
   }
 }

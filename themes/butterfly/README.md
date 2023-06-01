@@ -79,9 +79,15 @@ npm i hexo-theme-butterfly
 - [x] Related articles
 - [x] Displays outdated notice for a post
 - [x] Share (AddThis/Sharejs/Addtoany)
+<<<<<<< HEAD
 - [X] Comment (Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42/artalk)
 - [x] Multiple Comment System Support
 - [x] Online Chats (Chatra/Tidio/Daovoice/Crisp/messenger)
+=======
+- [X] Comment (Disqus/Disqusjs/Livere/Gitalk/Valine/Waline/Utterances/Facebook Comments/Twikoo/Giscus/Remark42)
+- [x] Multiple Comment System Support
+- [x] Online Chats (Chatra/Tidio/Daovoice/Gitter/Crisp)
+>>>>>>> e5e3a0e (my blog first commit)
 - [x] Web analytics
 - [x] Google AdSense
 - [x] Webmaster Verification
@@ -89,7 +95,11 @@ npm i hexo-theme-butterfly
 - [x] Typewriter Effect: activate_power_mode
 - [x] Background effects (Canvas ribbon/canvas_ribbon_piao/canvas_nest)
 - [x] Mouse click effects (Fireworks/Heart/Text)
+<<<<<<< HEAD
 - [x] Preloader/Loading Animation/pace.js
+=======
+- [x] Preloader/Loading Animation
+>>>>>>> e5e3a0e (my blog first commit)
 - [x] Busuanzi visitor counter
 - [x] Medium Zoom/Fancybox
 - [x] Mermaid

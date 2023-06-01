@@ -3,6 +3,16 @@
 
 script.
   function loadWaline () {
+<<<<<<< HEAD
+=======
+    function insertCSS () {
+      const link = document.createElement("link")
+      link.rel = "stylesheet"
+      link.href = "!{url_for(theme.asset.waline_css)}"
+      document.head.appendChild(link)
+    }
+
+>>>>>>> e5e3a0e (my blog first commit)
     function initWaline () {
       const waline = Waline.init(Object.assign({
         el: '#waline-wrap',
@@ -14,6 +24,7 @@ script.
       }, !{JSON.stringify(option)}))
     }
 
+<<<<<<< HEAD
     const walineCSSLoad = document.getElementById('waline-css')
 
     if (typeof Waline === 'object') {
@@ -23,6 +34,12 @@ script.
       getCSS('!{url_for(theme.asset.waline_css)}','waline-css').then(() => {
         getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
       })
+=======
+    if (typeof Waline === 'function') initWaline()
+    else {
+      insertCSS()
+      getScript('!{url_for(theme.asset.waline_js)}').then(initWaline)
+>>>>>>> e5e3a0e (my blog first commit)
     }
   }
 

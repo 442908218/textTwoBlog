@@ -13,17 +13,30 @@
       .sticky_layout
         if showToc
           include ./card_post_toc.pug
+<<<<<<< HEAD
+=======
+        !=partial('includes/widget/card_weibo', {}, {cache: true})
+>>>>>>> e5e3a0e (my blog first commit)
         !=partial('includes/widget/card_recent_post', {}, {cache: true})
         !=partial('includes/widget/card_ad', {}, {cache: true})
   else
     //- page
     !=partial('includes/widget/card_author', {}, {cache: true})
     !=partial('includes/widget/card_announcement', {}, {cache: true})
+<<<<<<< HEAD
     !=partial('includes/widget/card_top_self', {}, {cache: true})
+=======
+    !=partial('includes/widget/card_top_self', {}, {cache: true})      
+>>>>>>> e5e3a0e (my blog first commit)
 
     .sticky_layout
       if showToc
         include ./card_post_toc.pug
+<<<<<<< HEAD
+=======
+      !=partial('includes/widget/card_friend_link', {}, {cache: true})
+      !=partial('includes/widget/card_weibo', {}, {cache: true})
+>>>>>>> e5e3a0e (my blog first commit)
       !=partial('includes/widget/card_recent_post', {}, {cache: true})
       !=partial('includes/widget/card_ad', {}, {cache: true})
       !=partial('includes/widget/card_newest_comment', {}, {cache: true})

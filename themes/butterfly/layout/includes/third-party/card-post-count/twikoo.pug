@@ -18,7 +18,11 @@ script.
           includeReply: false
         }).then(function (res) {
           document.querySelectorAll('#recent-posts .twikoo-count').forEach((item,index) => {
+<<<<<<< HEAD
             item.textContent = res[index].count
+=======
+            item.innerText = res[index].count
+>>>>>>> e5e3a0e (my blog first commit)
           })
         }).catch(function (err) {
           console.log(err)

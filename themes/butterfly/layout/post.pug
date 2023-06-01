@@ -11,8 +11,17 @@ block content
       if (theme.post_meta.post.tags)
         .post-meta__tag-list
           each item, index in page.tags.data
+<<<<<<< HEAD
             a(href=url_for(item.path)).post-meta__tags #[=item.name]
       include includes/third-party/share/index.pug
+=======
+            a(href=url_for(item.path)).post-meta__tags
+              .tags-punctuation
+                svg.faa-tada.icon(style="height:1.1em;width:1.1em;fill:currentColor;position:relative;top:2px;margin-right:3px" aria-hidden="true")
+                  use(xlink:href='#icon-sekuaibiaoqian')
+              =item.name
+      //- include includes/third-party/share/index.pug
+>>>>>>> e5e3a0e (my blog first commit)
         
     if theme.reward.enable && theme.reward.QR_code
       !=partial('includes/post/reward', {}, {cache: true})

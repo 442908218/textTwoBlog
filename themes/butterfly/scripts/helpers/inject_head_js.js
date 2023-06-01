@@ -7,11 +7,18 @@
 
 hexo.extend.helper.register('inject_head_js', function () {
   const { darkmode, aside } = this.theme
+<<<<<<< HEAD
   const start = darkmode.start ? darkmode.start : 6
   const end = darkmode.end ? darkmode.end : 18
   const { theme_color } = hexo.theme.config
   const themeColorLight = (theme_color && theme_color.enable && theme_color.meta_theme_color_light) || '#ffffff'
   const themeColorDark = (theme_color && theme_color.enable && theme_color.meta_theme_color_dark) || '#0d0d0d'
+=======
+
+  const { theme_color } = hexo.theme.config
+  const themeColorLight = theme_color && theme_color.enable && theme_color.meta_theme_color_light || '#ffffff'
+  const themeColorDark = theme_color && theme_color.enable && theme_color.meta_theme_color_dark || '#0d0d0d'
+>>>>>>> e5e3a0e (my blog first commit)
 
   const localStore = `
     win.saveToLocal = {
@@ -61,6 +68,7 @@ hexo.extend.helper.register('inject_head_js', function () {
     })
   `
 
+<<<<<<< HEAD
   const getCSS = `
     win.getCSS = (url,id = false) => new Promise((resolve, reject) => {
       const link = document.createElement('link')
@@ -78,6 +86,8 @@ hexo.extend.helper.register('inject_head_js', function () {
     })
   `
 
+=======
+>>>>>>> e5e3a0e (my blog first commit)
   let darkmodeJs = ''
   if (darkmode.enable) {
     darkmodeJs = `
@@ -111,7 +121,11 @@ hexo.extend.helper.register('inject_head_js', function () {
             else if (isNotSpecified || hasNoSupport) {
               const now = new Date()
               const hour = now.getHours()
+<<<<<<< HEAD
               const isNight = hour <= ${start} || hour >= ${end}
+=======
+              const isNight = hour <= 6 || hour >= 18
+>>>>>>> e5e3a0e (my blog first commit)
               isNight ? activateDarkMode() : activateLightMode()
             }
             window.matchMedia('(prefers-color-scheme: dark)').addListener(function (e) {
@@ -126,7 +140,11 @@ hexo.extend.helper.register('inject_head_js', function () {
       darkmodeJs += `
           const now = new Date()
           const hour = now.getHours()
+<<<<<<< HEAD
           const isNight = hour <= ${start} || hour >= ${end}
+=======
+          const isNight = hour <= 6 || hour >= 18
+>>>>>>> e5e3a0e (my blog first commit)
           if (t === undefined) isNight ? activateDarkMode() : activateLightMode()
           else if (t === 'light') activateLightMode()
           else activateDarkMode()
@@ -162,5 +180,9 @@ hexo.extend.helper.register('inject_head_js', function () {
     detectApple()
     `
 
+<<<<<<< HEAD
   return `<script>(win=>{${localStore + getScript + getCSS + darkmodeJs + asideStatus + detectApple}})(window)</script>`
+=======
+  return `<script>(win=>{${localStore + getScript + darkmodeJs + asideStatus + detectApple}})(window)</script>`
+>>>>>>> e5e3a0e (my blog first commit)
 })

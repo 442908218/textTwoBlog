@@ -60,11 +60,19 @@ script.
           generateHtml(walineArray)
         }).catch(e => {
           const $dom = document.querySelector('#card-newest-comments .aside-list')
+<<<<<<< HEAD
           $dom.textContent= "!{_p('aside.card_newest_comments.error')}"
         }) 
       }
 
       if (typeof Waline === 'object') loadWaline()
+=======
+          $dom.innerHTML= "!{_p('aside.card_newest_comments.error')}"
+        }) 
+      }
+
+      if (typeof Waline === 'function') loadWaline() 
+>>>>>>> e5e3a0e (my blog first commit)
       else getScript('!{url_for(theme.asset.waline_js)}').then(loadWaline)
     }
 

@@ -15,7 +15,11 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
           title: post.title,
           path: post.path,
           cover: post.cover,
+<<<<<<< HEAD
           cover_type: post.cover_type,
+=======
+          randomcover: post.randomcover,
+>>>>>>> e5e3a0e (my blog first commit)
           weight: 1,
           updated: post.updated,
           created: post.date
@@ -50,6 +54,7 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
     result += '<div class="relatedPosts-list">'
 
     for (let i = 0; i < Math.min(relatedPosts.length, limitNum); i++) {
+<<<<<<< HEAD
       const cover = relatedPosts[i].cover || 'var(--default-bg-color)'
       const title = this.escape_html(relatedPosts[i].title)
       result += `<div><a href="${this.url_for(relatedPosts[i].path)}" title="${title}">`
@@ -58,6 +63,15 @@ hexo.extend.helper.register('related_posts', function (currentPost, allPosts) {
       } else {
         result += `<div class="cover" style="background: ${cover}"></div>`
       }
+=======
+      const cover =
+        relatedPosts[i].cover === false
+          ? relatedPosts[i].randomcover
+          : relatedPosts[i].cover
+      const title = this.escape_html(relatedPosts[i].title)
+      result += `<div><a href="${this.url_for(relatedPosts[i].path)}" title="${title}">`
+      result += `<img class="cover" src="${this.url_for(cover)}" alt="cover">`
+>>>>>>> e5e3a0e (my blog first commit)
       if (dateType === 'created') {
         result += `<div class="content is-center"><div class="date"><i class="far fa-calendar-alt fa-fw"></i> ${this.date(relatedPosts[i].created, hexoConfig.date_format)}</div>`
       } else {

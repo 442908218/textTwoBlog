@@ -46,7 +46,6 @@ search:
   local_search:
     input_placeholder: 搜索文章
     hits_empty: '找不到您查询的内容：${query}'
-    hits_stats: '共找到 ${hits} 篇文章'
 
 pagination:
   prev: 上一篇
@@ -58,11 +57,12 @@ aside:
   articles: 文章
   tags: 标签
   categories: 分类
-  card_announcement: 公告
+  card_announcement: 公告栏
   card_categories: 分类
   card_tags: 标签
   card_archives: 归档
   card_recent_post: 最新文章
+  card_friend_link: 通讯录
   card_webinfo:
     headline: 网站资讯
     article_name: 文章数目
@@ -92,7 +92,7 @@ date_suffix:
   day: 天前
   month: 个月前
 
-donate: 打赏
+donate: 投喂作者
 share: 分享
 
 rightside:
@@ -119,6 +119,5 @@ Snackbar:
   night_to_day: 你已切换为浅色模式
 
 loading: 加载中...
-load_more: 加载更多
 
 error404: 页面没有找到

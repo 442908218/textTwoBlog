@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 - const fbSDKVer = 'v16.0'
 - const fbSDK = theme.messenger.enable ? `https://connect.facebook.net/${theme.facebook_comments.lang}/sdk/xfbml.customerchat.js#xfbml=1&version=${fbSDKVer}` : `https://connect.facebook.net/${theme.facebook_comments.lang}/sdk.js#xfbml=1&version=${fbSDKVer}`
 
@@ -35,6 +36,25 @@ script.
 
   btf.addModeChange('facebook_comments', fbModeChange)
 
+=======
+#fb-root
+script.
+  function loadFBComment () {
+    var themeNow = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light'
+    document.getElementsByClassName('fb-comments')[0].setAttribute('data-colorscheme',themeNow)
+
+    if (typeof FB === 'object') FB.XFBML.parse()
+    else {
+      let ele = document.createElement('script')
+      ele.setAttribute('src','https://connect.facebook.net/!{theme.facebook_comments.lang}/sdk.js#xfbml=1&version=v13.0&appId=!{theme.facebook_comments.app_id}&autoLogAppEvents=1')
+      ele.setAttribute('async', 'true')
+      ele.setAttribute('defer', 'true')
+      ele.setAttribute('crossorigin', 'anonymous')
+      document.getElementById('fb-root').insertAdjacentElement('afterbegin',ele)
+    }   
+  }
+
+>>>>>>> e5e3a0e (my blog first commit)
   if ('!{theme.comments.use[0]}' === 'Facebook Comments' || !!{theme.comments.lazyload}) {
     if (!{theme.comments.lazyload}) btf.loadComment(document.querySelector('#post-comment .fb-comments'), loadFBComment)
     else loadFBComment()

@@ -11,4 +11,8 @@ hexo.extend.filter.register('before_generate', () => {
   }
   const newArray = use.map(item => item.toLowerCase().replace(/\b[a-z]/g, s => s.toUpperCase()))
   themeConfig.comments.use = newArray
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> e5e3a0e (my blog first commit)

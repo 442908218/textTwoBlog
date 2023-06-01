@@ -2,6 +2,16 @@
 
 script.
   function loadDisqusjs () {
+<<<<<<< HEAD
+=======
+    function addDisqusjsCSS () {
+      const ele = document.createElement('link')
+      ele.rel = 'stylesheet'
+      ele.href= '!{url_for(theme.asset.disqusjs_css)}'
+      document.getElementsByTagName('head')[0].appendChild(ele)
+    }
+
+>>>>>>> e5e3a0e (my blog first commit)
     function initDisqusjs () {
       window.disqusjs = null
       disqusjs = new DisqusJS(Object.assign({
@@ -23,11 +33,19 @@ script.
     }
 
 
+<<<<<<< HEAD
     btf.addModeChange('disqusjs', themeChange)
 
     if (window.disqusJsLoad) initDisqusjs()
     else {
       getCSS('!{url_for(theme.asset.disqusjs_css)}')
+=======
+    document.getElementById('darkmode').addEventListener('click', themeChange)
+
+    if (window.disqusJsLoad) initDisqusjs()
+    else {
+      addDisqusjsCSS()
+>>>>>>> e5e3a0e (my blog first commit)
       getScript('!{url_for(theme.asset.disqusjs)}').then(initDisqusjs)
       window.disqusJsLoad = true
     }
